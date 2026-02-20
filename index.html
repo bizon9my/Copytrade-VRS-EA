@@ -1045,9 +1045,9 @@
                             
                             <!-- WhatsApp Button Final -->
                             <div class="relative flex flex-col items-center justify-center w-full mt-8 md:mt-12">
-                                <a href="https://chat.whatsapp.com/IZdRt9QRLMfIOrvT3xM3l9" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto group relative inline-flex justify-center items-center gap-3 px-8 md:px-12 py-5 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl font-black text-xl text-white shadow-[0_10px_20px_-10px_rgba(16,185,129,0.5)] hover:shadow-[0_20px_30px_-10px_rgba(16,185,129,0.6)] hover:-translate-y-2 transition-all duration-300 overflow-hidden cursor-pointer tracking-wide">
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle relative z-10 flex-shrink-0 animate-bounce"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
-                                    <span class="relative z-10 whitespace-nowrap">Hubungi Talian Admin Sini</span>
+                                <a href="https://chat.whatsapp.com/IZdRt9QRLMfIOrvT3xM3l9" target="_blank" rel="noopener noreferrer" class="w-full sm:w-auto group relative inline-flex justify-center items-center gap-2 sm:gap-3 px-4 sm:px-8 md:px-12 py-4 md:py-5 bg-gradient-to-r from-green-500 to-emerald-600 rounded-2xl font-black text-base sm:text-lg md:text-xl text-white shadow-[0_10px_20px_-10px_rgba(16,185,129,0.5)] hover:shadow-[0_20px_30px_-10px_rgba(16,185,129,0.6)] hover:-translate-y-2 transition-all duration-300 overflow-hidden cursor-pointer tracking-wide">
+                                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-message-circle w-6 h-6 md:w-7 md:h-7 relative z-10 flex-shrink-0 animate-bounce"><path d="M7.9 20A9 9 0 1 0 4 16.1L2 22Z"></path></svg>
+                                    <span class="relative z-10 text-center leading-tight">Hubungi Talian Admin Sini</span>
                                     <!-- Shine effect -->
                                     <div class="absolute inset-0 bg-white/20 translate-y-full group-hover:translate-y-0 transition-transform duration-300 rounded-2xl"></div>
                                 </a>
@@ -1107,7 +1107,9 @@
                   if (progress < 1) {
                     window.requestAnimationFrame(step);
                   } else {
-                    gainText.textContent = '+500%++'; // Letak ++ di hujung apabila selesai
+                    // Animasi Pop dan Warna Berubah bila siap mengira
+                    gainText.innerHTML = `+500%<span class="text-yellow-400 animate-pulse drop-shadow-[0_0_8px_rgba(250,204,21,0.8)]">++</span>`;
+                    gainText.classList.add('scale-110', 'transition-transform', 'duration-300', 'text-emerald-400');
                   }
                 };
                 window.requestAnimationFrame(step);
@@ -1149,8 +1151,6 @@
               
               const textSpan = this.querySelector('.js-copy-text');
               const iconSvg = this.querySelector('svg');
-              
-              // Swap Icon temporarily to a checkmark if needed, but let's just change text and color for simplicity
               
               // Apply classes
               originalBtnClasses.forEach(c => { if(c) this.classList.remove(c) });
