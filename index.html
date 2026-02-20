@@ -237,39 +237,101 @@
                                 <p class="text-slate-400 text-lg max-w-3xl mx-auto mb-4">Kebanyakan Copytrade di luar sana menggunakan strategi <span class="text-red-400">Martingale</span> (layer tanpa henti). Bila market trending kuat, akaun akan floating besar sehingga modal hangus (MC).</p>
                                 <p class="text-slate-300 text-lg max-w-3xl mx-auto font-medium"><span class="text-blue-400 font-bold">VRS EA Berbeza.</span> Kami Menggunakan <span class="text-green-400 font-bold">Single Entry.</span></p>
                             </div>
-                            <div class="overflow-x-auto">
-                                <table class="w-full text-left border-collapse rounded-2xl overflow-hidden min-w-[600px]">
-                                    <thead>
-                                        <tr class="bg-slate-800 text-white">
-                                            <th class="p-4 md:p-6 font-bold text-lg">Ciri-Ciri</th>
-                                            <th class="p-4 md:p-6 font-bold text-red-400 text-lg bg-red-950/20 border-b border-red-500/20">Martingale (Risiko Tinggi)</th>
-                                            <th class="p-4 md:p-6 font-bold text-green-400 text-lg bg-green-950/20 border-b border-green-500/20">Single Entry VRS EA (Konsisten)</th>
-                                        </tr>
-                                    </thead>
-                                    <tbody class="text-slate-300">
-                                        <tr class="border-b border-slate-700 bg-slate-900/50 hover:bg-slate-800/50 transition-colors">
-                                            <td class="p-4 md:p-6 font-medium text-white">Gaya Entry</td>
-                                            <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Lapis banyak (layering)</td>
-                                            <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Satu entry berkualiti pada satu masa</td>
-                                        </tr>
-                                        <tr class="border-b border-slate-700 bg-slate-900/30 hover:bg-slate-800/50 transition-colors">
-                                            <td class="p-4 md:p-6 font-medium text-white">Stop Loss</td>
-                                            <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Jarang guna SL (Harap market pusing)</td>
-                                            <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Wajib ada Stop Loss (SL)</td>
-                                        </tr>
-                                        <tr class="border-b border-slate-700 bg-slate-900/50 hover:bg-slate-800/50 transition-colors">
-                                            <td class="p-4 md:p-6 font-medium text-white">Drawdown</td>
-                                            <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Sangat tinggi (Boleh cecah 80-90%)</td>
-                                            <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Rendah &amp; Terkawal</td>
-                                        </tr>
-                                        <tr class="bg-slate-900/30 hover:bg-slate-800/50 transition-colors">
-                                            <td class="p-4 md:p-6 font-medium text-white">Ketahanan</td>
-                                            <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Akaun cepat "meletup" jika trend kuat</td>
-                                            <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Akaun bertahan lama untuk jangka panjang</td>
-                                        </tr>
-                                    </tbody>
-                                </table>
+                            
+                            <!-- Responsif Table / Cards Updated -->
+                            <div class="mt-8">
+                                <!-- Desktop View (Table) - Hidden on Mobile -->
+                                <div class="hidden md:block overflow-hidden rounded-2xl border border-slate-700">
+                                    <table class="w-full text-left border-collapse bg-slate-800/50">
+                                        <thead>
+                                            <tr class="bg-slate-800 text-white">
+                                                <th class="p-4 md:p-6 font-bold text-lg border-b border-slate-700 w-[25%]">Ciri-Ciri</th>
+                                                <th class="p-4 md:p-6 font-bold text-red-400 text-lg bg-red-950/20 border-b border-red-500/20 w-[37.5%]">Martingale (Risiko Tinggi)</th>
+                                                <th class="p-4 md:p-6 font-bold text-green-400 text-lg bg-green-950/20 border-b border-green-500/20 w-[37.5%]">Single Entry VRS EA (Konsisten)</th>
+                                            </tr>
+                                        </thead>
+                                        <tbody class="text-slate-300">
+                                            <tr class="border-b border-slate-700 hover:bg-slate-800/80 transition-colors">
+                                                <td class="p-4 md:p-6 font-medium text-white bg-slate-900/50">Gaya Entry</td>
+                                                <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Lapis banyak (layering)</td>
+                                                <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Satu entry berkualiti pada satu masa</td>
+                                            </tr>
+                                            <tr class="border-b border-slate-700 hover:bg-slate-800/80 transition-colors">
+                                                <td class="p-4 md:p-6 font-medium text-white bg-slate-900/30">Stop Loss</td>
+                                                <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Jarang guna SL (Harap market pusing)</td>
+                                                <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Wajib ada Stop Loss (SL)</td>
+                                            </tr>
+                                            <tr class="border-b border-slate-700 hover:bg-slate-800/80 transition-colors">
+                                                <td class="p-4 md:p-6 font-medium text-white bg-slate-900/50">Drawdown</td>
+                                                <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Sangat tinggi (Boleh cecah 80-90%)</td>
+                                                <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Rendah &amp; Terkawal</td>
+                                            </tr>
+                                            <tr class="hover:bg-slate-800/80 transition-colors">
+                                                <td class="p-4 md:p-6 font-medium text-white bg-slate-900/30">Ketahanan</td>
+                                                <td class="p-4 md:p-6 text-red-300 bg-red-950/10">Akaun cepat "meletup" jika trend kuat</td>
+                                                <td class="p-4 md:p-6 text-green-300 bg-green-950/10">Akaun bertahan lama untuk jangka panjang</td>
+                                            </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+
+                                <!-- Mobile View (Cards Stacked) - Hidden on Desktop -->
+                                <div class="md:hidden space-y-4">
+                                    <div class="bg-slate-800/40 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                                        <div class="bg-slate-700/50 p-3 text-center font-bold text-white border-b border-slate-700">Gaya Entry</div>
+                                        <div class="grid grid-cols-2 divide-x divide-slate-700">
+                                            <div class="p-4 bg-red-950/10">
+                                                <div class="text-[10px] text-red-400 font-bold mb-1 uppercase tracking-wider">Martingale</div>
+                                                <div class="text-sm text-red-300">Lapis banyak (layering)</div>
+                                            </div>
+                                            <div class="p-4 bg-green-950/10">
+                                                <div class="text-[10px] text-green-400 font-bold mb-1 uppercase tracking-wider">VRS EA</div>
+                                                <div class="text-sm text-green-300">Satu entry berkualiti</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-800/40 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                                        <div class="bg-slate-700/50 p-3 text-center font-bold text-white border-b border-slate-700">Stop Loss</div>
+                                        <div class="grid grid-cols-2 divide-x divide-slate-700">
+                                            <div class="p-4 bg-red-950/10">
+                                                <div class="text-[10px] text-red-400 font-bold mb-1 uppercase tracking-wider">Martingale</div>
+                                                <div class="text-sm text-red-300">Jarang guna SL</div>
+                                            </div>
+                                            <div class="p-4 bg-green-950/10">
+                                                <div class="text-[10px] text-green-400 font-bold mb-1 uppercase tracking-wider">VRS EA</div>
+                                                <div class="text-sm text-green-300">Wajib ada Stop Loss</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-800/40 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                                        <div class="bg-slate-700/50 p-3 text-center font-bold text-white border-b border-slate-700">Drawdown</div>
+                                        <div class="grid grid-cols-2 divide-x divide-slate-700">
+                                            <div class="p-4 bg-red-950/10">
+                                                <div class="text-[10px] text-red-400 font-bold mb-1 uppercase tracking-wider">Martingale</div>
+                                                <div class="text-sm text-red-300">Sangat tinggi (80-90%)</div>
+                                            </div>
+                                            <div class="p-4 bg-green-950/10">
+                                                <div class="text-[10px] text-green-400 font-bold mb-1 uppercase tracking-wider">VRS EA</div>
+                                                <div class="text-sm text-green-300">Rendah &amp; Terkawal</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="bg-slate-800/40 rounded-xl overflow-hidden border border-slate-700 shadow-lg">
+                                        <div class="bg-slate-700/50 p-3 text-center font-bold text-white border-b border-slate-700">Ketahanan</div>
+                                        <div class="grid grid-cols-2 divide-x divide-slate-700">
+                                            <div class="p-4 bg-red-950/10">
+                                                <div class="text-[10px] text-red-400 font-bold mb-1 uppercase tracking-wider">Martingale</div>
+                                                <div class="text-sm text-red-300">Cepat "meletup" jika trend kuat</div>
+                                            </div>
+                                            <div class="p-4 bg-green-950/10">
+                                                <div class="text-[10px] text-green-400 font-bold mb-1 uppercase tracking-wider">VRS EA</div>
+                                                <div class="text-sm text-green-300">Bertahan lama untuk jangka panjang</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
+                            
                             <div class="grid md:grid-cols-2 gap-8 mt-12">
                                 <div class="bg-slate-900 border border-red-500/30 rounded-xl p-6 relative overflow-hidden h-full flex flex-col">
                                     <div class="absolute top-0 right-0 p-2 bg-red-500/20 rounded-bl-xl text-red-400 text-xs font-bold">MARTINGALE</div>
@@ -1231,8 +1293,10 @@
               sDot.style.top = `${y}%`;
               if (status === "TP HIT!") {
                  sDot.classList.add('bg-green-300', 'scale-150');
+                 sDot.classList.remove('bg-white');
               } else {
                  sDot.classList.remove('bg-green-300', 'scale-150');
+                 sDot.classList.add('bg-white');
               }
               
               // Update Visual SL (Merah -> Biru Dashed)
