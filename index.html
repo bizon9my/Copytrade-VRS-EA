@@ -409,6 +409,9 @@
                                         <div id="single-entry-marker" class="absolute left-[30%] top-[40%] w-2 h-2 bg-green-500 rounded-full hidden">
                                             <div class="absolute -top-5 -left-4 text-[10px] text-green-400 whitespace-nowrap bg-slate-900/80 px-1.5 py-0.5 rounded border border-green-500/30">Buy Stop Triggered</div>
                                         </div>
+                                        <div id="single-profit-overlay" class="absolute inset-0 bg-green-950/90 flex items-center justify-center z-20 hidden backdrop-blur-sm">
+                                            <div class="text-4xl md:text-5xl font-black text-white border-4 border-white px-6 py-2 rounded-2xl shadow-[0_0_30px_rgba(34,197,94,0.8)] rotate-[-10deg]">PROFIT!</div>
+                                        </div>
                                     </div>
                                     <p class="text-center text-green-400 text-xs md:text-sm mt-4 font-medium px-2">Sabar tunggu setup, entry, dan biarkan profit.</p>
                                 </div>
@@ -1344,8 +1347,9 @@
         const sSlLine = document.getElementById('single-sl-line');
         const sSlText = document.getElementById('single-sl-text');
         const sEntryMarker = document.getElementById('single-entry-marker');
+        const sProfitOverlay = document.getElementById('single-profit-overlay');
 
-        if (sStatus && sProfit && sPath && sDot && sSlLine && sSlText && sEntryMarker) {
+        if (sStatus && sProfit && sPath && sDot && sSlLine && sSlText && sEntryMarker && sProfitOverlay) {
            let sStep = 0;
            let tpStep = null; // Simpan posisi ketika hit TP
            
@@ -1462,6 +1466,15 @@
               } else {
                  sEntryMarker.classList.add('hidden');
                  sEntryMarker.classList.remove('block');
+              }
+
+              // Update Profit Overlay
+              if (status === "TP HIT!") {
+                 sProfitOverlay.classList.remove('hidden');
+                 sProfitOverlay.classList.add('flex');
+              } else {
+                 sProfitOverlay.classList.add('hidden');
+                 sProfitOverlay.classList.remove('flex');
               }
 
            }, 50);
